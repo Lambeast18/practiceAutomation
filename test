@@ -1,5 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import time 
+
 
 driver = webdriver.Chrome('./chromedriver')
 driver.get("https://www.byui.edu/")
+time.sleep(5)
+driver.find_element_by_xpath("/html/body/header/div[2]/div/div/a[2]/span[2]").click()
