@@ -4,14 +4,16 @@ import time
 
 
 driver = webdriver.Chrome('./chromedriver')
-driver.get("https://www.byui.edu/")
+driver.get("https://www.byui.edu/") # open byui.edu
 time.sleep(5)
 driver.find_element_by_xpath("/html/body/header/div[2]/div/div/a[2]/span[2]").click()
+# click sign in
 time.sleep(5)
 username = driver.find_element_by_xpath("//input[@id='username']")
-username.send_keys('nmlambert')
+username.send_keys('nmlambert') # send nmlambert to username
 time.sleep(5)
 password = driver.find_element_by_xpath('//*[@id="password"]')
-password.send_keys('Beastlylamb18')
+password.send_keys('Beastlylamb18') # send to password
 time.sleep(3)
 driver.find_element_by_xpath('//*[@id="fm1"]/section[3]/input[5]').click()
+# click login
